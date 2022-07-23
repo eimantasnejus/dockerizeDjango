@@ -1,0 +1,39 @@
+2022-07-24
+Steps to install new Linux:
+
+- General:
+sudo apt-get update
+sudo apt-get upgrade
+
+- git
+sudo apt install git
+git config --global user.name "Eimantas Nejus"
+git config --global user.email eimantas.nejus@gmail.com
+
+- OhMyZsh
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+- pip3
+sudo apt install python3-pip
+
+- Programs:
+	- Chrome
+	- SublimeText
+	- pyCharm
+
+- Docker:
+	- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
+		- docker ps -sa
+		- docker info
+		- docker system df
+		- docker search ubuntu
+		- docker images
+		- docker run -it ubuntu
+		- docker start 1f75bcb214ed
+		- docker stop vigilant_shamir
+		- docker rm cf8f7ffe64ad
+
+- SSH key
+	- ssh-keygen -t rsa -b 4096 -C "eimantas.nejus@gmail.com"
+	- cat ~/.ssh/id_rsa.pub
