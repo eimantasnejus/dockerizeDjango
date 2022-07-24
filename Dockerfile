@@ -1,5 +1,5 @@
 # base image
-FROM python:3.10
+FROM python:3.10-slim
 # setup environment variable
 ENV DockerHOME=/home/app/webapp
 
@@ -13,7 +13,10 @@ WORKDIR $DockerHOME
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# install dependencies
+# install system requirements
+RUN apt-get update && \
+    apt-get install -y libpq-dev gcc
+
 RUN pip install --upgrade pip
 
 # copy whole project to your docker home directory.
